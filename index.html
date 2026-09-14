@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Game</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Quiz Game</h1>
+      <p>Test your knowledge</p>
+    </header>
+
+    <main class="quiz-container">
+      <!-- Quiz Header -->
+      <section class="quiz-header">
+        <div class="progress-info">
+          <span id="question-number">Question 1 of 5</span>
+          <span id="score">Score: 0</span>
+        </div>
+
+        <div class="progress-bar">
+          <div id="progress"></div>
+        </div>
+      </section>
+
+      <!-- Question Area -->
+      <section id="quiz-section">
+        <div class="question-type" id="question-type">Single Select</div>
+
+        <h2 id="question">Question will appear here</h2>
+
+        <div id="options"></div>
+
+        <div id="feedback"></div>
+
+        <!-- Navigation -->
+        <div class="buttons">
+          <button id="previous-btn" onclick="previousQuestion()">
+            Previous
+          </button>
+
+          <button id="next-btn" onclick="nextQuestion()">Next</button>
+        </div>
+      </section>
+
+      <!-- Result -->
+      <section id="result-section" class="result-section">
+        <h2>Quiz Completed!</h2>
+
+        <p>Your Score</p>
+
+        <div class="final-score" id="final-score">0 / 5</div>
+
+        <p id="result-message"></p>
+
+        <button onclick="restartQuiz()">Restart Quiz</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
